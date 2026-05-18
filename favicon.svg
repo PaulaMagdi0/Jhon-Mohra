@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Gold coin gradient -->
+    <radialGradient id="seal" cx="38%" cy="28%" r="68%">
+      <stop offset="0%"   stop-color="#f5e6b0"/>
+      <stop offset="40%"  stop-color="#d4a840"/>
+      <stop offset="100%" stop-color="#7a5c1a"/>
+    </radialGradient>
+
+    <!-- Top-left highlight -->
+    <radialGradient id="shine" cx="30%" cy="24%" r="35%">
+      <stop offset="0%"  stop-color="#fffcf0" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#fffcf0" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff4d4"/>
+      <stop offset="60%"  stop-color="#e8c06a"/>
+      <stop offset="100%" stop-color="#8a6820"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle shadow -->
+  <circle cx="32" cy="33" r="29" fill="#3d2a08" opacity=".12"/>
+
+  <!-- Coin body -->
+  <circle cx="32" cy="32" r="29" fill="url(#seal)"/>
+
+  <!-- Rim -->
+  <circle cx="32" cy="32" r="29" fill="none"
+          stroke="#5a3e0c" stroke-opacity=".4" stroke-width=".8"/>
+
+  <!-- Single inner ring -->
+  <circle cx="32" cy="32" r="23" fill="none"
+          stroke="#8a6820" stroke-opacity=".4"
+          stroke-width=".7" stroke-dasharray="1.2 1.6"/>
+
+  <!-- Highlight -->
+  <circle cx="32" cy="32" r="29" fill="url(#shine)"/>
+
+  <!-- J&M Text -->
+  <text x="32" y="39"
+        text-anchor="middle"
+        font-family="'Playfair Display', 'Didot', 'Times New Roman', serif"
+        font-weight="700"
+        font-size="18"
+        letter-spacing="1"
+        fill="url(#ink)"
+        stroke="#5a3e0c" stroke-opacity=".25" stroke-width=".3"
+        paint-order="stroke">J&amp;M</text>
+</svg>

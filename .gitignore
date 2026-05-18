@@ -1,0 +1,56 @@
+# Claude Code session state
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+.project
+.settings/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Node (in case anything is added later)
+node_modules/
+package-lock.json.bak
+
+# Build artifacts
+dist/
+build/
+out/
+.cache/
+
+# Temporary / backup files
+*.bak
+*.tmp
+*.orig
+*~
+
+# OS-specific image previews
+*.icloud
