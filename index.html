@@ -335,7 +335,7 @@
       color:var(--gold);
       opacity:0;
       animation:fall linear infinite;
-      filter:drop-shadow(0 2px 4px rgba(157,122,47,.22));
+      text-shadow: 0 2px 4px rgba(157,122,47,.22);
       will-change:transform, opacity;
     }
     /* 36 particles, spaced ~3% apart across the viewport.
@@ -380,7 +380,7 @@
 
     /* A handful of tonal variants for visual richness */
     .ambient .p:nth-child(3n)  { color:var(--gold-deep); }
-    .ambient .p:nth-child(5n)  { color:var(--gold-soft); filter:drop-shadow(0 2px 6px rgba(232,212,161,.4)); }
+    .ambient .p:nth-child(5n)  { color:var(--gold-soft); text-shadow: 0 2px 6px rgba(232,212,161,.4); }
     .ambient .p:nth-child(7n)  { color:var(--wine-soft); opacity:.55; }
 
     @keyframes fall {
@@ -1571,6 +1571,11 @@
         animation-iteration-count: 1 !important;
         transition-duration: .01ms !important;
       }
+      .ambient { display: none; }
+    }
+
+    /* Phones don't benefit from 36 continuously-animating DOM nodes; the cost is real and visible. */
+    @media (max-width: 620px) {
       .ambient { display: none; }
     }
   </style>
