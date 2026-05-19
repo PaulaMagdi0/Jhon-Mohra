@@ -90,7 +90,7 @@ It's a static page — host it anywhere:
 - **Netlify / Vercel / Cloudflare Pages**: drag-and-drop the folder.
 - **Direct file**: works from `file://` for local previews.
 
-The site is currently configured for `https://click-to-fall.github.io/John-Mohra/` (see the `og:` meta tags). Update those URLs when you host elsewhere.
+The site is currently configured for `https://jhon-mohra.vercel.app/` (see the `og:` meta tags). Update those URLs when you host elsewhere.
 
 ---
 
