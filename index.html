@@ -1727,7 +1727,7 @@
               كنيسة السيدة العذراء مريم<br>
               <span style="color:var(--gold-deep);">الزيتون</span>
             </p>
-            <a class="btn" href="https://maps.app.goo.gl/HijsSyZUk8gY1nZE8" target="_blank" rel="noopener">
+            <a class="btn" href="https://maps.app.goo.gl/HijsSyZUk8gY1nZE8" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               لوكيشن الكنيسة
             </a>
@@ -1747,7 +1747,7 @@
               <span lang="en">Lareine</span><br>
               <span style="color:var(--gold-deep);">نادي <span lang="en">Sun Rice</span></span>
             </p>
-            <a class="btn" href="https://maps.app.goo.gl/NGiSgHcdGLAQmbJ47" target="_blank" rel="noopener">
+            <a class="btn" href="https://maps.app.goo.gl/NGiSgHcdGLAQmbJ47" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
               لوكيشن القاعة
             </a>
@@ -2401,7 +2401,7 @@
         details: EVENT.details,
         location:EVENT.location
       });
-      window.open('https://calendar.google.com/calendar/render?' + params.toString(), '_blank', 'noopener');
+      window.open('https://calendar.google.com/calendar/render?' + params.toString(), '_blank', 'noopener,noreferrer');
     }
 
     function addToCalendar() {
@@ -2422,7 +2422,7 @@
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
       try {
         if (isMobile) {
-          window.open(waUrl, '_blank', 'noopener');
+          window.open(waUrl, '_blank', 'noopener,noreferrer');
           return;
         }
         if (navigator.share) {
