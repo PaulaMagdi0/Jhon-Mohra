@@ -30,10 +30,14 @@ Everything — markup, styles, animations, music, RSVP form — lives in `index.
 
 ```
 /
-├── index.html              # the entire site
-├── favicon.svg             # gold-coin J&M monogram
-├── og-card.jpg             # 1200×630 social-share preview (WhatsApp, Twitter, etc.)
-├── image2.jpg … image7.jpg # cover + gallery photos
+├── index.html                       # the entire site
+├── favicon.svg                      # gold-coin J&M monogram
+├── og-card.jpg                      # 1200×630 social-share preview (WhatsApp, Twitter, etc.)
+├── image2.jpg … image7.jpg          # cover + gallery photos (JPEG fallback)
+├── image*.avif / image*.webp        # AVIF + WebP variants served via <picture>
+├── image5-mobile.{jpg,avif,webp}    # smaller hero variant for phones
+├── vercel.json                      # edge headers: strict CSP + immutable cache for static assets
+├── scripts/optimize-images.sh       # regenerates AVIF/WebP variants from JPEG sources
 └── README.md
 ```
 
@@ -90,7 +94,20 @@ It's a static page — host it anywhere:
 - **Netlify / Vercel / Cloudflare Pages**: drag-and-drop the folder.
 - **Direct file**: works from `file://` for local previews.
 
-The site is currently configured for `https://jhon-mohra.vercel.app/` (see the `og:` meta tags). Update those URLs when you host elsewhere.
+On Vercel, `vercel.json` applies a strict CSP, HSTS, `Permissions-Policy`, and a 1-year `immutable` cache for `.avif/.webp/.jpg/.png/.svg/.woff2`. Other hosts will need an equivalent config to get the same security and caching behavior.
+
+The site is currently configured for `https://jhon-mohra.vercel.app/` (see the `og:` meta tags and the `img-src` in the CSP). Update those URLs when you host elsewhere.
+
+### Regenerating image variants
+
+If you swap the source JPEGs, regenerate the AVIF + WebP variants:
+
+```bash
+brew install webp libavif    # one-time
+./scripts/optimize-images.sh
+```
+
+The script is idempotent — it overwrites existing variants and prints a size report.
 
 ---
 
