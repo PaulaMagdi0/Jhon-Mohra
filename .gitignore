@@ -45,6 +45,8 @@ dist/
 build/
 out/
 .cache/
+docs/
+scripts/
 
 # Temporary / backup files
 *.bak
