@@ -2778,36 +2778,41 @@
     */
     if (musicBtn) musicBtn.addEventListener('click', toggleMusic);
 
-    /* Pause countdown when tab is hidden — saves battery & is polite.
-       (Music pause logic kept defensive in case audio is re-enabled.) */
-    document.addEventListener('visibilitychange', () => {
-      if (document.hidden) {
-        if (isPlaying) stopMusic();
-        stopCountdown();
-      } else {
-        startCountdown();
-      }
-    });
+    (function deferNonCriticalWiring() {
+      const schedule = window.requestIdleCallback || function (cb) { return setTimeout(cb, 1); };
+      schedule(() => {
+        /* Pause countdown when tab is hidden — saves battery & is polite.
+           (Music pause logic kept defensive in case audio is re-enabled.) */
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            if (isPlaying) stopMusic();
+            stopCountdown();
+          } else {
+            startCountdown();
+          }
+        });
 
-    /* ============================================================
-       SCROLL PROGRESS BAR
-       ============================================================ */
-    (function initScrollProgress() {
-      const bar = document.getElementById('scrollProgress');
-      if (!bar) return;
-      let ticking = false;
-      function update() {
-        const doc = document.documentElement;
-        const max = (doc.scrollHeight - doc.clientHeight) || 1;
-        const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
-        bar.style.setProperty('--p', pct.toFixed(2) + '%');
-        ticking = false;
-      }
-      window.addEventListener('scroll', () => {
-        if (!ticking) { requestAnimationFrame(update); ticking = true; }
-      }, { passive: true });
-      window.addEventListener('resize', update, { passive: true });
-      update();
+        /* ============================================================
+           SCROLL PROGRESS BAR
+           ============================================================ */
+        (function initScrollProgress() {
+          const bar = document.getElementById('scrollProgress');
+          if (!bar) return;
+          let ticking = false;
+          function update() {
+            const doc = document.documentElement;
+            const max = (doc.scrollHeight - doc.clientHeight) || 1;
+            const pct = Math.min(100, Math.max(0, (window.scrollY / max) * 100));
+            bar.style.setProperty('--p', pct.toFixed(2) + '%');
+            ticking = false;
+          }
+          window.addEventListener('scroll', () => {
+            if (!ticking) { requestAnimationFrame(update); ticking = true; }
+          }, { passive: true });
+          window.addEventListener('resize', update, { passive: true });
+          update();
+        })();
+      });
     })();
   </script>
 </body>
