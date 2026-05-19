@@ -2450,15 +2450,35 @@
       const submitBtn = form.querySelector('button[type="submit"]');
       if (submitBtn) submitBtn.disabled = true;
 
-      const name    = (form.name.value || '').trim().replace(/[<>]/g, '');
+      /* Sanitize: same allow-list as the ?to= personalization. */
+      const rawName = (form.name.value || '').trim().slice(0, 40);
+      const name    = rawName.replace(/[^\p{L}\p{M}\s\-']/gu, '');
       const attend  = form.attend.value;
       const guests  = form.guests.value;
 
+      /* Build the thank-you DOM safely — no innerHTML, no template-literal interpolation of user input. */
+      thanks.textContent = '';
+      const lead = document.createElement('span');
+      lead.textContent = attend === 'yes' ? 'يا أهلاً يا ' : 'شكراً يا ';
+      const nameEl = document.createElement('b');
+      nameEl.textContent = name || 'صديقنا';
+      const sparkle = document.createTextNode(' ✦');
+      const br = document.createElement('br');
+      const detail = document.createElement('span');
+      detail.style.cssText = "font-family:'Tajawal',sans-serif;font-style:normal;font-size:.9rem;color:var(--ink-soft);";
       if (attend === 'yes') {
-        thanks.innerHTML = `يا أهلاً يا <b>${name}</b> ✦<br><span style="font-family:'Tajawal',sans-serif;font-style:normal;font-size:.9rem;color:var(--ink-soft);">بنستناك مع ${guests} ضيوف · <span lang="en">26 May 2026</span></span>`;
+        detail.appendChild(document.createTextNode('بنستناك مع '));
+        detail.appendChild(document.createTextNode(String(parseInt(guests, 10) || 1)));
+        detail.appendChild(document.createTextNode(' ضيوف · '));
+        const dateSpan = document.createElement('span');
+        dateSpan.lang = 'en';
+        dateSpan.textContent = '26 May 2026';
+        detail.appendChild(dateSpan);
+        thanks.append(lead, nameEl, sparkle, br, detail);
         celebrate();
       } else {
-        thanks.innerHTML = `شكراً يا <b>${name}</b> ✦<br><span style="font-family:'Tajawal',sans-serif;font-style:normal;font-size:.9rem;color:var(--ink-soft);">هنفتقدك معانا، ودعواتك أغلى من حضورك</span>`;
+        detail.textContent = 'هنفتقدك معانا، ودعواتك أغلى من حضورك';
+        thanks.append(lead, nameEl, sparkle, br, detail);
       }
       thanks.classList.add('show');
       form.style.display = 'none';
