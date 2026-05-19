@@ -1578,6 +1578,12 @@
     @media (max-width: 620px) {
       .ambient { display: none; }
     }
+
+    /* Skip rendering offscreen sections until they're near the viewport — saves ~30-100ms TBT on phones. */
+    .gallery, .timeline, .info-grid, .rsvp, .signature {
+      content-visibility: auto;
+      contain-intrinsic-size: 600px;
+    }
   </style>
 </head>
 <body>
