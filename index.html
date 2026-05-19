@@ -1574,9 +1574,11 @@
       .ambient { display: none; }
     }
 
-    /* Phones don't benefit from 36 continuously-animating DOM nodes; the cost is real and visible. */
+    /* Phones: lighter ambient — keep ~9 evenly-spaced drifters (1st, 5th, 9th, …) instead of all 36,
+       no drop-shadow filter (already text-shadow). About 75% less compositor work, same vibe. */
     @media (max-width: 620px) {
-      .ambient { display: none; }
+      .ambient .p                  { display: none; }
+      .ambient .p:nth-child(4n+1)  { display: block; }
     }
 
     /* Skip rendering offscreen sections until they're near the viewport — saves ~30-100ms TBT on phones. */
