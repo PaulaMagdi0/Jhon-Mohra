@@ -1970,13 +1970,20 @@
         const params = new URLSearchParams(window.location.search);
         const raw    = params.get('to');
         if (!raw) return;
-        /* Sanitize: strip tags, cap length, normalise spacing */
-        const name = raw.replace(/[<>]/g, '').trim().slice(0, 40);
+        /* Sanitize: trim, cap length, keep only letters/spaces/marks/hyphens (Arabic + Latin). */
+        const name = raw.trim().slice(0, 40).replace(/[^\p{L}\p{M}\s\-']/gu, '');
         if (!name) return;
 
         const greet = document.getElementById('guestGreeting');
         if (greet) {
-          greet.innerHTML = `أهلاً يا <span class="guest-name">${name}</span> ✦`;
+          /* Safe: build via textContent, never innerHTML, so attacker-controlled strings can't open tags. */
+          greet.textContent = '';
+          greet.appendChild(document.createTextNode('أهلاً يا '));
+          const span = document.createElement('span');
+          span.className = 'guest-name';
+          span.textContent = name;
+          greet.appendChild(span);
+          greet.appendChild(document.createTextNode(' ✦'));
           greet.hidden = false;
         }
         /* Pre-fill RSVP name field so guests don't have to retype */
