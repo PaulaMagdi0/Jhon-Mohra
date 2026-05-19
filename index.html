@@ -2144,6 +2144,7 @@
 
       setTimeout(() => {
         invitation.classList.add('show');
+        startCountdown();
         invitation.removeAttribute('aria-hidden');
         cover.style.transition = 'opacity .8s, transform .8s';
         cover.style.opacity = '0';
@@ -2260,7 +2261,6 @@
       clearInterval(countdownTimer);
       countdownTimer = null;
     }
-    startCountdown();
 
     /* ============================================================
        PHOTO DECK
