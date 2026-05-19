@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Re-encodes every JPEG in the repo root into AVIF + WebP variants.
+# Re-encodes the photos in images/ + the OG card at root into AVIF + WebP variants.
 # Source photos are 591x1280 — already phone-sized — so we don't downscale.
-# Instead, the "mobile" variants use lower quality to save more bytes.
+# The "mobile" hero variant uses lower quality at the same resolution to save more bytes.
 # Re-run any time you swap source photos.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -18,7 +18,8 @@ AVIF_SPEED=4        # 0=slowest/smallest, 10=fastest. 4 is the sweet spot.
 WEBP_Q_MOBILE=70
 AVIF_Q_MOBILE=60
 
-for src in image2.jpg image3.jpg image4.jpg image5.jpg image6.jpg image7.jpg og-card.jpg; do
+# Gallery photos + hero — live in images/
+for src in images/image2.jpg images/image3.jpg images/image4.jpg images/image5.jpg images/image6.jpg images/image7.jpg; do
   [[ -f "$src" ]] || { echo "skip: $src not found"; continue; }
   base="${src%.jpg}"
   echo "→ $src"
@@ -26,12 +27,19 @@ for src in image2.jpg image3.jpg image4.jpg image5.jpg image6.jpg image7.jpg og-
   avifenc --min 0 --max $AVIF_Q --speed $AVIF_SPEED --jobs all "$src" "$base.avif" >/dev/null
 done
 
-# Mobile hero variant — same source, more aggressive compression
-echo "→ image5-mobile (more aggressive compression for phones)"
-cp image5.jpg image5-mobile.jpg
-cwebp   -q $WEBP_Q_MOBILE   -m 6 -mt -quiet image5-mobile.jpg -o image5-mobile.webp
-avifenc --min 0 --max $AVIF_Q_MOBILE --speed $AVIF_SPEED --jobs all image5-mobile.jpg image5-mobile.avif >/dev/null
+# Social-share OG card — stays at repo root (referenced by absolute URL in og:image meta)
+if [[ -f og-card.jpg ]]; then
+  echo "→ og-card.jpg"
+  cwebp   -q $WEBP_Q   -m 6 -mt -quiet og-card.jpg -o og-card.webp
+  avifenc --min 0 --max $AVIF_Q --speed $AVIF_SPEED --jobs all og-card.jpg og-card.avif >/dev/null
+fi
+
+# Mobile hero variant — same source as desktop hero, more aggressive compression
+echo "→ images/image5-mobile (more aggressive compression for phones)"
+cp images/image5.jpg images/image5-mobile.jpg
+cwebp   -q $WEBP_Q_MOBILE   -m 6 -mt -quiet images/image5-mobile.jpg -o images/image5-mobile.webp
+avifenc --min 0 --max $AVIF_Q_MOBILE --speed $AVIF_SPEED --jobs all images/image5-mobile.jpg images/image5-mobile.avif >/dev/null
 
 echo
 echo "Size report (sorted):"
-ls -lS image*.{jpg,webp,avif} og-card.{jpg,webp,avif} 2>/dev/null | awk '{printf "  %-30s %8s\n", $NF, $5}'
+ls -lS images/image*.{jpg,webp,avif} og-card.{jpg,webp,avif} 2>/dev/null | awk '{printf "  %-40s %8s\n", $NF, $5}'
