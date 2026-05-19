@@ -54,3 +54,15 @@ out/
 
 # OS-specific image previews
 *.icloud
+
+# ────────────────────────────────────────────────────────────────────
+# Note: generated AVIF/WebP variants in images/ ARE committed.
+# They're produced by scripts/optimize-images.sh and served directly
+# by Vercel (no build step). Do NOT add *.avif/*.webp to this file —
+# committing them is what makes the static deploy work.
+# ────────────────────────────────────────────────────────────────────
+
+# Lighthouse / measurement artifacts (commit explicitly if you want them tracked)
+docs/superpowers/plans/baseline.report.*
+docs/superpowers/plans/after.report.*
+docs/superpowers/plans/*-waterfall.png

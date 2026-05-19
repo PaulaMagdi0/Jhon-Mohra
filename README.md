@@ -30,14 +30,17 @@ Everything — markup, styles, animations, music, RSVP form — lives in `index.
 
 ```
 /
-├── index.html                       # the entire site
-├── favicon.svg                      # gold-coin J&M monogram
-├── og-card.jpg                      # 1200×630 social-share preview (WhatsApp, Twitter, etc.)
-├── image2.jpg … image7.jpg          # cover + gallery photos (JPEG fallback)
-├── image*.avif / image*.webp        # AVIF + WebP variants served via <picture>
-├── image5-mobile.{jpg,avif,webp}    # smaller hero variant for phones
-├── vercel.json                      # edge headers: strict CSP + immutable cache for static assets
-├── scripts/optimize-images.sh       # regenerates AVIF/WebP variants from JPEG sources
+├── index.html               # the entire site
+├── vercel.json              # security + cache headers
+├── favicon.svg              # gold-coin J&M monogram
+├── og-card.{jpg,webp,avif}  # 1200×630 social-share previews (kept at root: referenced by absolute og:image URL)
+├── images/                  # all photo variants
+│   ├── image2.{jpg,webp,avif} … image7.{jpg,webp,avif}   # gallery photos
+│   └── image5-mobile.{jpg,webp,avif}                     # phone-sized hero
+├── scripts/
+│   └── optimize-images.sh   # re-runnable AVIF+WebP pipeline
+├── docs/
+│   └── superpowers/plans/   # optimization plan + final review
 └── README.md
 ```
 
@@ -48,7 +51,7 @@ Everything — markup, styles, animations, music, RSVP form — lives in `index.
 All of these are single-line edits in `index.html`.
 
 ### Change the envelope cover photo
-Search for `<img src="image5.jpg"` and swap to any of `image2.jpg`–`image7.jpg`.
+Search for `<img src="images/image5.jpg"` and swap to any of `images/image2.jpg`–`images/image7.jpg`.
 Also update the `<link rel="preload">` and `<meta og:image>` tags at the top of `<head>` to match.
 
 ### Tune photo framing inside the envelope
