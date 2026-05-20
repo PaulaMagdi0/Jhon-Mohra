@@ -1,0 +1,191 @@
+{
+  "_comment": "Edit this file to change any text on the invitation. The page reads it at load time. After editing, just reload the page (or redeploy to Vercel).",
+
+  "meta": {
+    "pageTitle": "John & Mohra · Wedding Invitation",
+    "description": "بكل الفرح ندعوكم لمشاركتنا يوم إكليلنا · John & Mohra · 26 May 2026",
+    "ogTitle": "John & Mohra — Wedding Invitation",
+    "ogDescription": "بكل الفرح ندعوكم لمشاركتنا يوم إكليلنا · 26 May 2026",
+    "ogImageAlt": "John & Mohra Wedding · 26 May 2026"
+  },
+
+  "splash": {
+    "monogramLeft": "J",
+    "monogramAmp": "&",
+    "monogramRight": "M",
+    "coupleName": "John & Mohra",
+    "subtitle": "Wedding · 2026"
+  },
+
+  "cover": {
+    "prelude": "Save the Date",
+    "script": "together with their families",
+    "firstName": "John",
+    "amp": "&",
+    "secondName": "Mohra",
+    "date": "26 · 05 · 2026",
+    "photoCaption": "— with love —",
+    "envelopeAriaLabel": "Open invitation · افتح الدعوة",
+    "tapHintAr": "اضغط لفتح الدعوة",
+    "tapHintEn": "tap to open",
+    "sealMonogram": "J&M"
+  },
+
+  "hero": {
+    "eyebrow": "Wedding Invitation",
+    "firstName": "John",
+    "amp": "&",
+    "secondName": "Mohra",
+    "ariaLabel": "John and Mohra",
+    "verseText": "«وَأُعْطِيهِمْ قَلْبًا وَاحِدًا وَطَرِيقًا وَاحِدًا»",
+    "verseRef": "إرميا ٣٢ : ٣٩"
+  },
+
+  "welcome": {
+    "eyebrowHtml": "<span lang=\"en\">A Warm Welcome</span> · أهلاً بكم",
+    "titleHtml": "يسرّنا <span class=\"accent\">حضوركم</span>",
+    "lead": "بكل الفرح وبركة من الله ندعوكم لمشاركتنا فرحة يوم إكليلنا. وجودكم بيننا هو أجمل هدية وأغلى ذكرى تبقى معنا للأبد."
+  },
+
+  "saveTheDate": {
+    "eyebrow": "Save the Date",
+    "titleHtml": "<span lang=\"en\">Tuesday</span> · <span class=\"accent\">الثلاثاء</span>",
+    "dayNumber": "26",
+    "dayLabel": "Day",
+    "monthNumber": "05",
+    "monthLabel": "May",
+    "yearNumber": "26",
+    "yearLabel": "Year",
+    "fullDate": "~ Two Thousand & Twenty Six ~",
+    "btnCalendar": "أضف إلى التقويم",
+    "btnShare": "مشاركة عبر واتساب"
+  },
+
+  "countdown": {
+    "eyebrow": "The Countdown Begins",
+    "titleHtml": "Until <span class=\"accent\">our day</span>",
+    "weddingDateISO": "2026-05-26T17:00:00+02:00",
+    "labels": {
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Min",
+      "seconds": "Sec"
+    },
+    "dayMessageEn": "Today is the day ✦",
+    "dayMessageAr": "اليوم يوم فرحنا"
+  },
+
+  "events": [
+    {
+      "title": "الكنيسة",
+      "time": "5:00 PM",
+      "whereLine1Html": "كنيسة السيدة العذراء مريم",
+      "whereLine2Html": "<span style=\"color:var(--gold-deep);\">الزيتون</span>",
+      "mapUrl": "https://maps.app.goo.gl/HijsSyZUk8gY1nZE8",
+      "mapLabel": "لوكيشن الكنيسة"
+    },
+    {
+      "title": "القاعة",
+      "time": "7:00 PM",
+      "whereLine1Html": "<span lang=\"en\">Lareine</span>",
+      "whereLine2Html": "<span style=\"color:var(--gold-deep);\">نادي <span lang=\"en\">Sun Rice</span></span>",
+      "mapUrl": "https://maps.app.goo.gl/NGiSgHcdGLAQmbJ47",
+      "mapLabel": "لوكيشن القاعة"
+    }
+  ],
+
+  "gallery": {
+    "eyebrowHtml": "<span lang=\"en\">Our Moments</span> · لحظاتنا",
+    "titleHtml": "Our <span class=\"accent\">Story</span> in Pictures",
+    "leadHtml": "اسحب يميناً أو يساراً · <span lang=\"en\">swipe through</span>",
+    "prevAriaLabel": "Previous photo · السابقة",
+    "nextAriaLabel": "Next photo · التالية",
+    "regionAriaLabel": "Photo gallery · معرض الصور",
+    "dotsAriaLabel": "Photo indicators",
+    "dotLabelTemplate": "Photo {n} of {total}",
+    "photos": [
+      { "base": "images/image7", "alt": "Photo 6" },
+      { "base": "images/image6", "alt": "Photo 5" },
+      { "base": "images/image5", "alt": "Photo 4" },
+      { "base": "images/image4", "alt": "Photo 3" },
+      { "base": "images/image3", "alt": "Photo 2" },
+      { "base": "images/image2", "alt": "Photo 1" }
+    ]
+  },
+
+  "message": {
+    "eyebrowHtml": "<span lang=\"en\">A Note From Us</span> · رسالة منّا",
+    "titleHtml": "من <span class=\"accent\">العريس والعروسة</span>",
+    "lead": "نتشرف بحضوركم ومشاركتكم فرحتنا في يوم إكليلنا، ووجودكم معانا هيكمل فرحتنا ويخلي اليوم أجمل بكتير."
+  },
+
+  "timeline": {
+    "eyebrowHtml": "<span lang=\"en\">The Day</span> · جدول اليوم",
+    "titleHtml": "Wedding Day <span class=\"accent\">Schedule</span>",
+    "items": [
+      { "time": "5:00 PM", "title": "الإكليل المقدّس", "descHtml": "بداية مراسم الإكليل في كنيسة السيدة العذراء مريم بالزيتون." },
+      { "time": "6:30 PM", "title": "استراحة وتنقل", "descHtml": "انتقال الضيوف من الكنيسة إلى قاعة الاستقبال." },
+      { "time": "7:00 PM", "title": "الاستقبال والاحتفال", "descHtml": "بداية الاحتفال في <span lang=\"en\">Lareine</span> — نادي <span lang=\"en\">Sun Rice</span>." },
+      { "time": "8:30 PM", "title": "العشاء والرقص", "descHtml": "عشاء فاخر مع موسيقى ورقص حتى نهاية الليل." }
+    ]
+  },
+
+  "info": {
+    "eyebrowHtml": "<span lang=\"en\">Good to Know</span> · معلومات للضيوف",
+    "titleHtml": "قبل ما <span class=\"accent\">تيجوا</span>",
+    "items": [
+      { "title": "Dress Code", "descHtml": "إطلالة رسمية أنيقة<br><span lang=\"en\" style=\"color:var(--gold-deep);\">Smart Formal</span>" },
+      { "title": "Parking",    "descHtml": "يوجد موقف بالنادي<br><span lang=\"en\" style=\"color:var(--gold-deep);\">Available on-site</span>" },
+      { "title": "Family",     "descHtml": "العائلة كلها مرحب بها<br><span lang=\"en\" style=\"color:var(--gold-deep);\">All ages welcome</span>" },
+      { "title": "Gifts",      "descHtml": "حضوركم أغلى هدية<br><span lang=\"en\" style=\"color:var(--gold-deep);\">Your presence is the gift</span>" }
+    ]
+  },
+
+  "rsvp": {
+    "eyebrowHtml": "<span lang=\"en\">RSVP</span> · يسعدنا تأكيد حضوركم",
+    "titleHtml": "هل ستحتفل <span class=\"accent\">معنا؟</span>",
+    "lead": "برجاء تأكيد الحضور حتى يتسنّى لنا تجهيز كل التفاصيل لكم.",
+    "labelName": "الاسم",
+    "placeholderName": "اكتب اسمك الكريم",
+    "labelAttend": "الحضور",
+    "labelGuests": "عدد الأشخاص",
+    "selectPlaceholder": "اختر…",
+    "optionYes": "نعم، سأحضر بفرح",
+    "optionNo": "للأسف لن أتمكن",
+    "btnSubmit": "تأكيد الحضور",
+    "thanksYesPrefix": "يا أهلاً يا ",
+    "thanksNoPrefix": "شكراً يا ",
+    "thanksDefaultName": "صديقنا",
+    "thanksYesDetailPrefix": "بنستناك مع ",
+    "thanksYesDetailMid": " ضيوف · ",
+    "thanksYesDetailDate": "26 May 2026",
+    "thanksNoDetail": "هنفتقدك معانا، ودعواتك أغلى من حضورك"
+  },
+
+  "signature": {
+    "scriptTop": "With love,",
+    "note": "شكراً لإنكم هتكونوا جزء من أحلى يوم في حياتنا. محبتكم ودعواتكم أغلى هدية ممكن نستلمها.",
+    "scriptBottom": "John & Mohra",
+    "date": "26 · 05 · 2026"
+  },
+
+  "personalization": {
+    "greetingPrefix": "أهلاً يا ",
+    "greetingSuffix": " ✦"
+  },
+
+  "share": {
+    "title": "John & Mohra — Wedding Invitation",
+    "message": "بكل الفرح ندعوكم لمشاركتنا فرحة إكليلنا · John & Mohra · 26 May 2026",
+    "copiedMessage": "✦ تم نسخ رابط الدعوة"
+  },
+
+  "calendar": {
+    "title": "John & Mohra · Wedding",
+    "details": "5:00 PM Church (السيدة العذراء مريم - الزيتون) · 7:00 PM Reception (Lareine - Sun Rice)",
+    "location": "Cairo, Egypt",
+    "startUTC": "20260526T150000Z",
+    "endUTC":   "20260526T210000Z",
+    "icsFileName": "John-Mohra-Wedding.ics"
+  }
+}

@@ -39,11 +39,6 @@
         imagesizes="(max-width: 620px) 92vw, 440px"
         type="image/avif"
         fetchpriority="high">
-  <link rel="preload" as="image"
-        imagesrcset="images/image5-mobile.webp 591w, images/image5.webp 591w"
-        imagesizes="(max-width: 620px) 92vw, 440px"
-        type="image/webp"
-        fetchpriority="high">
 
   <style>
     /* ============================================================
@@ -1596,15 +1591,15 @@
   <!-- ========== SPLASH ========== -->
   <div class="splash" id="splash" aria-hidden="true" dir="ltr">
     <div class="splash-seal">
-      <span class="splash-mono" lang="en" dir="ltr">J<span class="amp">&amp;</span>M</span>
+      <span class="splash-mono" lang="en" dir="ltr"><span data-content="splash.monogramLeft">J</span><span class="amp" data-content="splash.monogramAmp">&amp;</span><span data-content="splash.monogramRight">M</span></span>
     </div>
     <div class="splash-ornament" aria-hidden="true">
       <span class="ln"></span>
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2 7 7 1-5 5 1 7-7-4-7 4 1-7-5-5 7-1z" opacity=".9"/></svg>
       <span class="ln"></span>
     </div>
-    <div class="splash-couple" lang="en" dir="ltr">John &amp; Mohra</div>
-    <div class="splash-sub" lang="en" dir="ltr">Wedding · 2026</div>
+    <div class="splash-couple" lang="en" dir="ltr" data-content="splash.coupleName">John &amp; Mohra</div>
+    <div class="splash-sub" lang="en" dir="ltr" data-content="splash.subtitle">Wedding · 2026</div>
     <div class="splash-line"></div>
   </div>
 
@@ -1627,15 +1622,15 @@
   <!-- ========== COVER (envelope) ========== -->
   <main class="wrap">
     <section class="cover" id="cover">
-      <div class="cover-prelude" lang="en">Save the Date</div>
-      <div class="cover-script" lang="en">together with their families</div>
+      <div class="cover-prelude" lang="en" data-content="cover.prelude">Save the Date</div>
+      <div class="cover-script" lang="en" data-content="cover.script">together with their families</div>
       <h1 class="cover-names" lang="en">
-        <span>John</span><span class="amp">&amp;</span><span>Mohra</span>
+        <span data-content="cover.firstName">John</span><span class="amp" data-content="cover.amp">&amp;</span><span data-content="cover.secondName">Mohra</span>
       </h1>
-      <div class="cover-date" lang="en">26 · 05 · 2026</div>
+      <div class="cover-date" lang="en" data-content="cover.date">26 · 05 · 2026</div>
 
       <div class="envelope-stage">
-        <div class="envelope" id="envelope" role="button" aria-label="Open invitation · افتح الدعوة" tabindex="0">
+        <div class="envelope" id="envelope" role="button" data-content-attr="aria-label:cover.envelopeAriaLabel" aria-label="Open invitation · افتح الدعوة" tabindex="0">
           <div class="env-back"></div>
           <div class="env-photo">
             <picture>
@@ -1652,20 +1647,20 @@
                    decoding="async"
                    draggable="false">
             </picture>
-            <div class="env-photo-caption" lang="en">— with love —</div>
+            <div class="env-photo-caption" lang="en" data-content="cover.photoCaption">— with love —</div>
           </div>
           <div class="env-bottom"></div>
           <div class="env-flap"></div>
           <div class="seal" aria-hidden="true">
-            <span class="seal-mono" lang="en">J&amp;M</span>
+            <span class="seal-mono" lang="en" data-content="cover.sealMonogram">J&amp;M</span>
           </div>
         </div>
       </div>
 
       <div class="tap-hint">
-        <span>اضغط لفتح الدعوة</span>
+        <span data-content="cover.tapHintAr">اضغط لفتح الدعوة</span>
         <span class="dot"></span>
-        <span lang="en">tap to open</span>
+        <span lang="en" data-content="cover.tapHintEn">tap to open</span>
       </div>
     </section>
 
@@ -1674,11 +1669,11 @@
 
       <!-- HERO -->
       <section class="card section hero reveal">
-        <span class="eyebrow" lang="en">Wedding Invitation</span>
-        <h2 class="hero-names" lang="en" aria-label="John and Mohra">
-          <span class="name">John</span>
-          <span class="amp">&amp;</span>
-          <span class="name">Mohra</span>
+        <span class="eyebrow" lang="en" data-content="hero.eyebrow">Wedding Invitation</span>
+        <h2 class="hero-names" lang="en" data-content-attr="aria-label:hero.ariaLabel" aria-label="John and Mohra">
+          <span class="name" data-content="hero.firstName">John</span>
+          <span class="amp" data-content="hero.amp">&amp;</span>
+          <span class="name" data-content="hero.secondName">Mohra</span>
         </h2>
 
         <div class="ornament hero-ornament" aria-hidden="true">
@@ -1693,17 +1688,17 @@
         </div>
 
         <p class="hero-verse">
-          «وَأُعْطِيهِمْ قَلْبًا وَاحِدًا وَطَرِيقًا وَاحِدًا»
-          <span class="hero-verse-ref">إرميا ٣٢ : ٣٩</span>
+          <span data-content="hero.verseText">«وَأُعْطِيهِمْ قَلْبًا وَاحِدًا وَطَرِيقًا وَاحِدًا»</span>
+          <span class="hero-verse-ref" data-content="hero.verseRef">إرميا ٣٢ : ٣٩</span>
         </p>
       </section>
 
       <!-- WELCOME -->
       <section class="card section reveal" style="text-align:center;">
-        <span class="eyebrow"><span lang="en">A Warm Welcome</span> · أهلاً بكم</span>
-        <h3 class="section-title">يسرّنا <span class="accent">حضوركم</span></h3>
+        <span class="eyebrow" data-content-html="welcome.eyebrowHtml"><span lang="en">A Warm Welcome</span> · أهلاً بكم</span>
+        <h3 class="section-title" data-content-html="welcome.titleHtml">يسرّنا <span class="accent">حضوركم</span></h3>
         <p class="guest-greeting" id="guestGreeting" hidden></p>
-        <p class="section-lead">
+        <p class="section-lead" data-content="welcome.lead">
           بكل الفرح وبركة من الله ندعوكم لمشاركتنا فرحة يوم إكليلنا.
           وجودكم بيننا هو أجمل هدية وأغلى ذكرى تبقى معنا للأبد.
         </p>
@@ -1711,48 +1706,48 @@
 
       <!-- SAVE THE DATE -->
       <section class="card section save-date reveal">
-        <span class="eyebrow" lang="en">Save the Date</span>
-        <h3 class="section-title"><span lang="en">Tuesday</span> · <span class="accent">الثلاثاء</span></h3>
+        <span class="eyebrow" lang="en" data-content="saveTheDate.eyebrow">Save the Date</span>
+        <h3 class="section-title" data-content-html="saveTheDate.titleHtml"><span lang="en">Tuesday</span> · <span class="accent">الثلاثاء</span></h3>
 
         <div class="date-row" dir="ltr" lang="en">
           <div class="date-block">
-            <div class="num">26</div>
-            <div class="lbl">Day</div>
+            <div class="num" data-content="saveTheDate.dayNumber">26</div>
+            <div class="lbl" data-content="saveTheDate.dayLabel">Day</div>
           </div>
           <div class="date-sep"></div>
           <div class="date-block">
-            <div class="num">05</div>
-            <div class="lbl">May</div>
+            <div class="num" data-content="saveTheDate.monthNumber">05</div>
+            <div class="lbl" data-content="saveTheDate.monthLabel">May</div>
           </div>
           <div class="date-sep"></div>
           <div class="date-block">
-            <div class="num">26</div>
-            <div class="lbl">Year</div>
+            <div class="num" data-content="saveTheDate.yearNumber">26</div>
+            <div class="lbl" data-content="saveTheDate.yearLabel">Year</div>
           </div>
         </div>
-        <div class="date-day" lang="en">~ Two Thousand &amp; Twenty Six ~</div>
+        <div class="date-day" lang="en" data-content="saveTheDate.fullDate">~ Two Thousand &amp; Twenty Six ~</div>
 
         <div class="btn-row" style="margin-top:22px;">
           <button class="btn btn-solid" type="button" onclick="addToCalendar()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-            أضف إلى التقويم
+            <span data-content="saveTheDate.btnCalendar">أضف إلى التقويم</span>
           </button>
           <button class="btn" type="button" onclick="shareInvitation()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            مشاركة عبر واتساب
+            <span data-content="saveTheDate.btnShare">مشاركة عبر واتساب</span>
           </button>
         </div>
       </section>
 
       <!-- COUNTDOWN -->
       <section class="card section reveal" style="text-align:center;">
-        <span class="eyebrow" lang="en">The Countdown Begins</span>
-        <h3 class="section-title" lang="en">Until <span class="accent">our day</span></h3>
+        <span class="eyebrow" lang="en" data-content="countdown.eyebrow">The Countdown Begins</span>
+        <h3 class="section-title" lang="en" data-content-html="countdown.titleHtml">Until <span class="accent">our day</span></h3>
         <div class="countdown" id="countdown" dir="ltr" lang="en" aria-live="off">
-          <div class="count-item"><strong>00</strong><span>Days</span></div>
-          <div class="count-item"><strong>00</strong><span>Hours</span></div>
-          <div class="count-item"><strong>00</strong><span>Min</span></div>
-          <div class="count-item"><strong>00</strong><span>Sec</span></div>
+          <div class="count-item"><strong>00</strong><span data-content="countdown.labels.days">Days</span></div>
+          <div class="count-item"><strong>00</strong><span data-content="countdown.labels.hours">Hours</span></div>
+          <div class="count-item"><strong>00</strong><span data-content="countdown.labels.minutes">Min</span></div>
+          <div class="count-item"><strong>00</strong><span data-content="countdown.labels.seconds">Sec</span></div>
         </div>
       </section>
 
@@ -1768,15 +1763,15 @@
                 <path d="M9 22v-7h6v7"/>
               </svg>
             </div>
-            <div class="event-title">الكنيسة</div>
-            <div class="event-time">5:00 PM</div>
+            <div class="event-title" data-content="events.0.title">الكنيسة</div>
+            <div class="event-time" data-content="events.0.time">5:00 PM</div>
             <p class="event-where">
-              كنيسة السيدة العذراء مريم<br>
-              <span style="color:var(--gold-deep);">الزيتون</span>
+              <span data-content-html="events.0.whereLine1Html">كنيسة السيدة العذراء مريم</span><br>
+              <span data-content-html="events.0.whereLine2Html"><span style="color:var(--gold-deep);">الزيتون</span></span>
             </p>
-            <a class="btn" href="https://maps.app.goo.gl/HijsSyZUk8gY1nZE8" target="_blank" rel="noopener noreferrer">
+            <a class="btn" data-content-attr="href:events.0.mapUrl" href="https://maps.app.goo.gl/HijsSyZUk8gY1nZE8" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              لوكيشن الكنيسة
+              <span data-content="events.0.mapLabel">لوكيشن الكنيسة</span>
             </a>
           </div>
 
@@ -1788,15 +1783,15 @@
                 <circle cx="12" cy="10" r="1.5" fill="currentColor"/>
               </svg>
             </div>
-            <div class="event-title">القاعة</div>
-            <div class="event-time">7:00 PM</div>
+            <div class="event-title" data-content="events.1.title">القاعة</div>
+            <div class="event-time" data-content="events.1.time">7:00 PM</div>
             <p class="event-where">
-              <span lang="en">Lareine</span><br>
-              <span style="color:var(--gold-deep);">نادي <span lang="en">Sun Rice</span></span>
+              <span data-content-html="events.1.whereLine1Html"><span lang="en">Lareine</span></span><br>
+              <span data-content-html="events.1.whereLine2Html"><span style="color:var(--gold-deep);">نادي <span lang="en">Sun Rice</span></span></span>
             </p>
-            <a class="btn" href="https://maps.app.goo.gl/NGiSgHcdGLAQmbJ47" target="_blank" rel="noopener noreferrer">
+            <a class="btn" data-content-attr="href:events.1.mapUrl" href="https://maps.app.goo.gl/NGiSgHcdGLAQmbJ47" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              لوكيشن القاعة
+              <span data-content="events.1.mapLabel">لوكيشن القاعة</span>
             </a>
           </div>
 
@@ -1805,14 +1800,14 @@
 
       <!-- GALLERY -->
       <section class="card section gallery reveal">
-        <span class="eyebrow"><span lang="en">Our Moments</span> · لحظاتنا</span>
-        <h3 class="section-title" lang="en">Our <span class="accent">Story</span> in Pictures</h3>
-        <p class="section-lead" style="margin-bottom:24px;">اسحب يميناً أو يساراً · <span lang="en">swipe through</span></p>
+        <span class="eyebrow" data-content-html="gallery.eyebrowHtml"><span lang="en">Our Moments</span> · لحظاتنا</span>
+        <h3 class="section-title" lang="en" data-content-html="gallery.titleHtml">Our <span class="accent">Story</span> in Pictures</h3>
+        <p class="section-lead" style="margin-bottom:24px;" data-content-html="gallery.leadHtml">اسحب يميناً أو يساراً · <span lang="en">swipe through</span></p>
 
         <div class="frame-wrapper">
           <div class="deck-frame">
             <div class="deck-stage" id="deckStage"
-                 role="region" aria-label="Photo gallery · معرض الصور"
+                 role="region" data-content-attr="aria-label:gallery.regionAriaLabel" aria-label="Photo gallery · معرض الصور"
                  aria-roledescription="carousel" tabindex="0">
               <div class="deck-spacer"></div>
               <div class="deck-card" data-index="0">
@@ -1867,23 +1862,23 @@
           </div>
 
           <div class="deck-controls">
-            <button class="deck-btn" id="deckPrev" type="button" aria-label="Previous photo · السابقة">
+            <button class="deck-btn" id="deckPrev" type="button" data-content-attr="aria-label:gallery.prevAriaLabel" aria-label="Previous photo · السابقة">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
             </button>
-            <button class="deck-btn" id="deckNext" type="button" aria-label="Next photo · التالية">
+            <button class="deck-btn" id="deckNext" type="button" data-content-attr="aria-label:gallery.nextAriaLabel" aria-label="Next photo · التالية">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
             </button>
           </div>
 
-          <div class="deck-dots" id="deckDots" role="tablist" aria-label="Photo indicators"></div>
+          <div class="deck-dots" id="deckDots" role="tablist" data-content-attr="aria-label:gallery.dotsAriaLabel" aria-label="Photo indicators"></div>
         </div>
       </section>
 
       <!-- MESSAGE -->
       <section class="card section reveal" style="text-align:center;">
-        <span class="eyebrow"><span lang="en">A Note From Us</span> · رسالة منّا</span>
-        <h3 class="section-title">من <span class="accent">العريس والعروسة</span></h3>
-        <p class="section-lead">
+        <span class="eyebrow" data-content-html="message.eyebrowHtml"><span lang="en">A Note From Us</span> · رسالة منّا</span>
+        <h3 class="section-title" data-content-html="message.titleHtml">من <span class="accent">العريس والعروسة</span></h3>
+        <p class="section-lead" data-content="message.lead">
           نتشرف بحضوركم ومشاركتكم فرحتنا في يوم إكليلنا،
           ووجودكم معانا هيكمل فرحتنا ويخلي اليوم أجمل بكتير.
         </p>
@@ -1891,29 +1886,29 @@
 
       <!-- TIMELINE -->
       <section class="card section reveal">
-        <span class="eyebrow"><span lang="en">The Day</span> · جدول اليوم</span>
-        <h3 class="section-title" lang="en">Wedding Day <span class="accent">Schedule</span></h3>
+        <span class="eyebrow" data-content-html="timeline.eyebrowHtml"><span lang="en">The Day</span> · جدول اليوم</span>
+        <h3 class="section-title" lang="en" data-content-html="timeline.titleHtml">Wedding Day <span class="accent">Schedule</span></h3>
 
         <div class="timeline">
           <div class="tl-item">
-            <div class="tl-time" lang="en">5:00 PM</div>
-            <div class="tl-title">الإكليل المقدّس</div>
-            <p class="tl-desc">بداية مراسم الإكليل في كنيسة السيدة العذراء مريم بالزيتون.</p>
+            <div class="tl-time" lang="en" data-content="timeline.items.0.time">5:00 PM</div>
+            <div class="tl-title" data-content="timeline.items.0.title">الإكليل المقدّس</div>
+            <p class="tl-desc" data-content-html="timeline.items.0.descHtml">بداية مراسم الإكليل في كنيسة السيدة العذراء مريم بالزيتون.</p>
           </div>
           <div class="tl-item">
-            <div class="tl-time" lang="en">6:30 PM</div>
-            <div class="tl-title">استراحة وتنقل</div>
-            <p class="tl-desc">انتقال الضيوف من الكنيسة إلى قاعة الاستقبال.</p>
+            <div class="tl-time" lang="en" data-content="timeline.items.1.time">6:30 PM</div>
+            <div class="tl-title" data-content="timeline.items.1.title">استراحة وتنقل</div>
+            <p class="tl-desc" data-content-html="timeline.items.1.descHtml">انتقال الضيوف من الكنيسة إلى قاعة الاستقبال.</p>
           </div>
           <div class="tl-item">
-            <div class="tl-time" lang="en">7:00 PM</div>
-            <div class="tl-title">الاستقبال والاحتفال</div>
-            <p class="tl-desc">بداية الاحتفال في <span lang="en">Lareine</span> — نادي <span lang="en">Sun Rice</span>.</p>
+            <div class="tl-time" lang="en" data-content="timeline.items.2.time">7:00 PM</div>
+            <div class="tl-title" data-content="timeline.items.2.title">الاستقبال والاحتفال</div>
+            <p class="tl-desc" data-content-html="timeline.items.2.descHtml">بداية الاحتفال في <span lang="en">Lareine</span> — نادي <span lang="en">Sun Rice</span>.</p>
           </div>
           <div class="tl-item">
-            <div class="tl-time" lang="en">8:30 PM</div>
-            <div class="tl-title">العشاء والرقص</div>
-            <p class="tl-desc">عشاء فاخر مع موسيقى ورقص حتى نهاية الليل.</p>
+            <div class="tl-time" lang="en" data-content="timeline.items.3.time">8:30 PM</div>
+            <div class="tl-title" data-content="timeline.items.3.title">العشاء والرقص</div>
+            <p class="tl-desc" data-content-html="timeline.items.3.descHtml">عشاء فاخر مع موسيقى ورقص حتى نهاية الليل.</p>
           </div>
         </div>
       </section>
@@ -1929,8 +1924,8 @@
         ╚═══════════════════════════════════════════════════════════════╝
       -->
       <section class="card section reveal" style="text-align:center;">
-        <span class="eyebrow"><span lang="en">Good to Know</span> · معلومات للضيوف</span>
-        <h3 class="section-title">قبل ما <span class="accent">تيجوا</span></h3>
+        <span class="eyebrow" data-content-html="info.eyebrowHtml"><span lang="en">Good to Know</span> · معلومات للضيوف</span>
+        <h3 class="section-title" data-content-html="info.titleHtml">قبل ما <span class="accent">تيجوا</span></h3>
 
         <div class="info-grid">
           <!-- TODO(couple): confirm dress code -->
@@ -1940,8 +1935,8 @@
                 <path d="M16 3l-4 4-4-4M4 7l8 14 8-14"/>
               </svg>
             </div>
-            <div class="info-title">Dress Code</div>
-            <p class="info-desc">إطلالة رسمية أنيقة<br><span lang="en" style="color:var(--gold-deep);">Smart Formal</span></p>
+            <div class="info-title" data-content="info.items.0.title">Dress Code</div>
+            <p class="info-desc" data-content-html="info.items.0.descHtml">إطلالة رسمية أنيقة<br><span lang="en" style="color:var(--gold-deep);">Smart Formal</span></p>
           </div>
 
           <!-- TODO(couple): confirm parking arrangement -->
@@ -1952,8 +1947,8 @@
                 <path d="M7 6V4h10v2M7 18v2M17 18v2"/>
               </svg>
             </div>
-            <div class="info-title">Parking</div>
-            <p class="info-desc">يوجد موقف بالنادي<br><span lang="en" style="color:var(--gold-deep);">Available on-site</span></p>
+            <div class="info-title" data-content="info.items.1.title">Parking</div>
+            <p class="info-desc" data-content-html="info.items.1.descHtml">يوجد موقف بالنادي<br><span lang="en" style="color:var(--gold-deep);">Available on-site</span></p>
           </div>
 
           <!-- TODO(couple): confirm whether kids are welcome -->
@@ -1965,8 +1960,8 @@
                 <path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 20c0-2 2-4 4-4s2 2 2 4"/>
               </svg>
             </div>
-            <div class="info-title">Family</div>
-            <p class="info-desc">العائلة كلها مرحب بها<br><span lang="en" style="color:var(--gold-deep);">All ages welcome</span></p>
+            <div class="info-title" data-content="info.items.2.title">Family</div>
+            <p class="info-desc" data-content-html="info.items.2.descHtml">العائلة كلها مرحب بها<br><span lang="en" style="color:var(--gold-deep);">All ages welcome</span></p>
           </div>
 
           <!-- TODO(couple): confirm gift policy — registry link? cash gifts? -->
@@ -1976,34 +1971,34 @@
                 <path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7H7a3 3 0 010-6c4 0 5 6 5 6zM12 7h5a3 3 0 000-6c-4 0-5 6-5 6z"/>
               </svg>
             </div>
-            <div class="info-title">Gifts</div>
-            <p class="info-desc">حضوركم أغلى هدية<br><span lang="en" style="color:var(--gold-deep);">Your presence is the gift</span></p>
+            <div class="info-title" data-content="info.items.3.title">Gifts</div>
+            <p class="info-desc" data-content-html="info.items.3.descHtml">حضوركم أغلى هدية<br><span lang="en" style="color:var(--gold-deep);">Your presence is the gift</span></p>
           </div>
         </div>
       </section>
 
       <!-- RSVP -->
       <section class="card section rsvp reveal" id="rsvp">
-        <span class="eyebrow"><span lang="en">RSVP</span> · يسعدنا تأكيد حضوركم</span>
-        <h3 class="section-title">هل ستحتفل <span class="accent">معنا؟</span></h3>
-        <p class="section-lead">برجاء تأكيد الحضور حتى يتسنّى لنا تجهيز كل التفاصيل لكم.</p>
+        <span class="eyebrow" data-content-html="rsvp.eyebrowHtml"><span lang="en">RSVP</span> · يسعدنا تأكيد حضوركم</span>
+        <h3 class="section-title" data-content-html="rsvp.titleHtml">هل ستحتفل <span class="accent">معنا؟</span></h3>
+        <p class="section-lead" data-content="rsvp.lead">برجاء تأكيد الحضور حتى يتسنّى لنا تجهيز كل التفاصيل لكم.</p>
 
         <form class="rsvp-form" id="rsvpForm" onsubmit="submitRsvp(event)">
           <div>
-            <label for="rsvpName">الاسم</label>
-            <input type="text" id="rsvpName" name="name" required placeholder="اكتب اسمك الكريم">
+            <label for="rsvpName" data-content="rsvp.labelName">الاسم</label>
+            <input type="text" id="rsvpName" name="name" required data-content-attr="placeholder:rsvp.placeholderName" placeholder="اكتب اسمك الكريم">
           </div>
           <div class="field-pair">
             <div>
-              <label for="rsvpAttend">الحضور</label>
+              <label for="rsvpAttend" data-content="rsvp.labelAttend">الحضور</label>
               <select id="rsvpAttend" name="attend" required>
-                <option value="">اختر…</option>
-                <option value="yes">نعم، سأحضر بفرح</option>
-                <option value="no">للأسف لن أتمكن</option>
+                <option value="" data-content="rsvp.selectPlaceholder">اختر…</option>
+                <option value="yes" data-content="rsvp.optionYes">نعم، سأحضر بفرح</option>
+                <option value="no" data-content="rsvp.optionNo">للأسف لن أتمكن</option>
               </select>
             </div>
             <div>
-              <label for="rsvpGuests">عدد الأشخاص</label>
+              <label for="rsvpGuests" data-content="rsvp.labelGuests">عدد الأشخاص</label>
               <select id="rsvpGuests" name="guests">
                 <option value="1">1</option>
                 <option value="2" selected>2</option>
@@ -2015,7 +2010,7 @@
           </div>
           <button class="btn btn-solid" type="submit" style="margin-top:8px;justify-self:center;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-            تأكيد الحضور
+            <span data-content="rsvp.btnSubmit">تأكيد الحضور</span>
           </button>
         </form>
 
@@ -2024,14 +2019,14 @@
 
       <!-- SIGNATURE -->
       <section class="card section signature reveal">
-        <div class="sig-script" lang="en">With love,</div>
+        <div class="sig-script" lang="en" data-content="signature.scriptTop">With love,</div>
         <div class="sig-line"></div>
-        <p class="sig-note">
+        <p class="sig-note" data-content="signature.note">
           شكراً لإنكم هتكونوا جزء من أحلى يوم في حياتنا.
           محبتكم ودعواتكم أغلى هدية ممكن نستلمها.
         </p>
-        <div class="sig-script" style="margin-top:18px;" lang="en">John &amp; Mohra</div>
-        <div class="sig-date" lang="en">26 · 05 · 2026</div>
+        <div class="sig-script" style="margin-top:18px;" lang="en" data-content="signature.scriptBottom">John &amp; Mohra</div>
+        <div class="sig-date" lang="en" data-content="signature.date">26 · 05 · 2026</div>
       </section>
 
     </section>
@@ -2052,9 +2047,69 @@
 
   <script>
     /* ============================================================
+       CONTENT LOADER — pulls all editable copy from content.json
+       so the couple can change any text in one place.
+
+       Usage: edit content.json, reload (or redeploy to Vercel).
+       data attributes the loader honours:
+         data-content="path.to.key"       → element.textContent
+         data-content-html="path.to.key"  → element.innerHTML (allows inline tags)
+         data-content-attr="attr:path|attr2:path2" → element.setAttribute(...)
+       ============================================================ */
+    window.SITE_CONTENT = null;
+    window.SITE_CONTENT_READY = (async () => {
+      /* file:// origins can't fetch sibling files (CORS). The HTML defaults
+         match content.json, so we skip the fetch entirely when opened locally. */
+      if (location.protocol === 'file:') {
+        window.SITE_CONTENT = {};
+        return {};
+      }
+      try {
+        const res = await fetch('content.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const content = await res.json();
+        window.SITE_CONTENT = content;
+        applyContent(content);
+        return content;
+      } catch (err) {
+        console.warn('content.json failed to load — falling back to HTML defaults.', err);
+        window.SITE_CONTENT = {};
+        return {};
+      }
+    })();
+
+    function applyContent(c) {
+      const get = (path) => {
+        if (!path) return undefined;
+        return path.split('.').reduce((o, k) => (o == null ? undefined : o[k]), c);
+      };
+
+      document.querySelectorAll('[data-content]').forEach(el => {
+        const v = get(el.dataset.content);
+        if (v != null) el.textContent = v;
+      });
+      document.querySelectorAll('[data-content-html]').forEach(el => {
+        const v = get(el.dataset.contentHtml);
+        if (v != null) el.innerHTML = v;
+      });
+      document.querySelectorAll('[data-content-attr]').forEach(el => {
+        (el.dataset.contentAttr || '').split('|').forEach(pair => {
+          const idx = pair.indexOf(':');
+          if (idx < 0) return;
+          const attr = pair.slice(0, idx).trim();
+          const path = pair.slice(idx + 1).trim();
+          const v = get(path);
+          if (v != null) el.setAttribute(attr, v);
+        });
+      });
+
+      if (c.meta && c.meta.pageTitle) document.title = c.meta.pageTitle;
+    }
+
+    /* ============================================================
        PER-RECIPIENT PERSONALIZATION  (?to=Yara → "أهلاً يا Yara ✦")
        ============================================================ */
-    (function personalize() {
+    window.SITE_CONTENT_READY.then(() => {
       try {
         const params = new URLSearchParams(window.location.search);
         const raw    = params.get('to');
@@ -2063,23 +2118,27 @@
         const name = raw.trim().slice(0, 40).replace(/[^\p{L}\p{M}\s\-']/gu, '');
         if (!name) return;
 
+        const p = (window.SITE_CONTENT && window.SITE_CONTENT.personalization) || {};
+        const prefix = p.greetingPrefix != null ? p.greetingPrefix : 'أهلاً يا ';
+        const suffix = p.greetingSuffix != null ? p.greetingSuffix : ' ✦';
+
         const greet = document.getElementById('guestGreeting');
         if (greet) {
           /* Safe: build via textContent, never innerHTML, so attacker-controlled strings can't open tags. */
           greet.textContent = '';
-          greet.appendChild(document.createTextNode('أهلاً يا '));
+          greet.appendChild(document.createTextNode(prefix));
           const span = document.createElement('span');
           span.className = 'guest-name';
           span.textContent = name;
           greet.appendChild(span);
-          greet.appendChild(document.createTextNode(' ✦'));
+          greet.appendChild(document.createTextNode(suffix));
           greet.hidden = false;
         }
         /* Pre-fill RSVP name field so guests don't have to retype */
         const nameInput = document.getElementById('rsvpName');
         if (nameInput && !nameInput.value) nameInput.value = name;
       } catch {}
-    })();
+    });
 
     /* ============================================================
        SPLASH — wax-seal intro
@@ -2094,7 +2153,11 @@
       const MAX_MS = 4000;
       const start  = performance.now();
       let imageReady = false;
+      let contentReady = false;
       let hidden = false;
+
+      /* Don't reveal page until content.json has been applied (or we've given up). */
+      window.SITE_CONTENT_READY.then(() => { contentReady = true; tryHide(); });
 
       function hide() {
         if (hidden) return;
@@ -2102,7 +2165,7 @@
         splash.classList.add('hide');
       }
       function tryHide() {
-        if (!imageReady) return;
+        if (!imageReady || !contentReady) return;
         const elapsed = performance.now() - start;
         if (elapsed >= MIN_MS) hide();
         else setTimeout(hide, MIN_MS - elapsed);
@@ -2192,7 +2255,16 @@
     /* ============================================================
        COUNTDOWN  (smooth digit crossfade, paused while tab hidden)
        ============================================================ */
-    const weddingDate = new Date('2026-05-26T17:00:00+02:00');
+    function getWeddingDate() {
+      const iso = (window.SITE_CONTENT && window.SITE_CONTENT.countdown && window.SITE_CONTENT.countdown.weddingDateISO)
+                  || '2026-05-26T17:00:00+02:00';
+      return new Date(iso);
+    }
+    function getCountdownLabels() {
+      const fallback = { days:'Days', hours:'Hours', minutes:'Min', seconds:'Sec' };
+      const fromJson = window.SITE_CONTENT && window.SITE_CONTENT.countdown && window.SITE_CONTENT.countdown.labels;
+      return Object.assign({}, fallback, fromJson || {});
+    }
     const cd = document.getElementById('countdown');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let countdownTimer = null;
@@ -2218,23 +2290,33 @@
 
     function ensureCdSkeleton() {
       if (cd.querySelectorAll('.count-item').length === 4) return;
+      const L = getCountdownLabels();
       cd.style.gridTemplateColumns = '';
       cd.innerHTML = `
-        <div class="count-item"><strong>00</strong><span>Days</span></div>
-        <div class="count-item"><strong>00</strong><span>Hours</span></div>
-        <div class="count-item"><strong>00</strong><span>Min</span></div>
-        <div class="count-item"><strong>00</strong><span>Sec</span></div>`;
+        <div class="count-item"><strong>00</strong><span>${L.days}</span></div>
+        <div class="count-item"><strong>00</strong><span>${L.hours}</span></div>
+        <div class="count-item"><strong>00</strong><span>${L.minutes}</span></div>
+        <div class="count-item"><strong>00</strong><span>${L.seconds}</span></div>`;
       lastCdValues = { d:null, h:null, m:null, s:null };
     }
 
     function updateCountdown() {
-      const diff = weddingDate - new Date();
+      const diff = getWeddingDate() - new Date();
       if (diff <= 0) {
-        cd.innerHTML = `
-          <div class="count-item" style="grid-column:1/-1;">
-            <strong style="font-style:italic;color:var(--wine);">Today is the day ✦</strong>
-            <span>اليوم يوم فرحنا</span>
-          </div>`;
+        const c = (window.SITE_CONTENT && window.SITE_CONTENT.countdown) || {};
+        const msgEn = c.dayMessageEn || 'Today is the day ✦';
+        const msgAr = c.dayMessageAr || 'اليوم يوم فرحنا';
+        cd.textContent = '';
+        const wrap = document.createElement('div');
+        wrap.className = 'count-item';
+        wrap.style.gridColumn = '1/-1';
+        const strong = document.createElement('strong');
+        strong.style.cssText = 'font-style:italic;color:var(--wine);';
+        strong.textContent = msgEn;
+        const span = document.createElement('span');
+        span.textContent = msgAr;
+        wrap.append(strong, span);
+        cd.appendChild(wrap);
         cd.style.gridTemplateColumns = '1fr';
         stopCountdown();
         return;
@@ -2279,12 +2361,14 @@
       let busy    = false;
 
       dotsBox.innerHTML = '';
+      const dotTpl = (window.SITE_CONTENT && window.SITE_CONTENT.gallery && window.SITE_CONTENT.gallery.dotLabelTemplate)
+                     || 'Photo {n} of {total}';
       for (let i=0; i<total; i++) {
         const d = document.createElement('button');
         d.type = 'button';
         d.className = 'deck-dot' + (i === total-1 ? ' active' : '');
         d.setAttribute('role', 'tab');
-        d.setAttribute('aria-label', `Photo ${i+1} of ${total}`);
+        d.setAttribute('aria-label', dotTpl.replace('{n}', i+1).replace('{total}', total));
         d.setAttribute('aria-selected', i === total-1 ? 'true' : 'false');
         d.addEventListener('click', () => {
           const steps = (front - i + total) % total;
@@ -2446,49 +2530,55 @@
     /* ============================================================
        ADD TO CALENDAR — Google Calendar on Android/desktop, .ics on iOS
        ============================================================ */
-    const EVENT = {
-      title: 'John & Mohra · Wedding',
-      details: '5:00 PM Church (السيدة العذراء مريم - الزيتون) · 7:00 PM Reception (Lareine - Sun Rice)',
-      location: 'Cairo, Egypt',
-      startUTC: '20260526T150000Z',  // 26 May 2026, 17:00 Cairo (UTC+2)
-      endUTC:   '20260526T210000Z'
-    };
+    function getEvent() {
+      const c = (window.SITE_CONTENT && window.SITE_CONTENT.calendar) || {};
+      return {
+        title:     c.title       || 'John & Mohra · Wedding',
+        details:   c.details     || '5:00 PM Church (السيدة العذراء مريم - الزيتون) · 7:00 PM Reception (Lareine - Sun Rice)',
+        location:  c.location    || 'Cairo, Egypt',
+        startUTC:  c.startUTC    || '20260526T150000Z',  // 26 May 2026, 17:00 Cairo (UTC+2)
+        endUTC:    c.endUTC      || '20260526T210000Z',
+        fileName:  c.icsFileName || 'John-Mohra-Wedding.ics'
+      };
+    }
 
     function isIOS() {
       return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
     }
 
     function downloadIcs() {
+      const E = getEvent();
       const ics = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
         'PRODID:-//John & Mohra//Wedding//EN',
         'BEGIN:VEVENT',
         'UID:john-mohra-2026-05-26@wedding',
-        'DTSTAMP:' + EVENT.startUTC,
-        'DTSTART:' + EVENT.startUTC,
-        'DTEND:'   + EVENT.endUTC,
-        'SUMMARY:' + EVENT.title,
-        'DESCRIPTION:' + EVENT.details,
-        'LOCATION:' + EVENT.location,
+        'DTSTAMP:' + E.startUTC,
+        'DTSTART:' + E.startUTC,
+        'DTEND:'   + E.endUTC,
+        'SUMMARY:' + E.title,
+        'DESCRIPTION:' + E.details,
+        'LOCATION:' + E.location,
         'END:VEVENT',
         'END:VCALENDAR'
       ].join('\r\n');
       const blob = new Blob([ics], { type:'text/calendar;charset=utf-8' });
       const url  = URL.createObjectURL(blob);
       const a    = document.createElement('a');
-      a.href = url; a.download = 'John-Mohra-Wedding.ics';
+      a.href = url; a.download = E.fileName;
       document.body.appendChild(a); a.click();
       setTimeout(() => { document.body.removeChild(a); URL.revokeObjectURL(url); }, 100);
     }
 
     function openGoogleCalendar() {
+      const E = getEvent();
       const params = new URLSearchParams({
         action: 'TEMPLATE',
-        text:    EVENT.title,
-        dates:   EVENT.startUTC + '/' + EVENT.endUTC,
-        details: EVENT.details,
-        location:EVENT.location
+        text:    E.title,
+        dates:   E.startUTC + '/' + E.endUTC,
+        details: E.details,
+        location:E.location
       });
       window.open('https://calendar.google.com/calendar/render?' + params.toString(), '_blank', 'noopener,noreferrer');
     }
@@ -2503,8 +2593,13 @@
        SHARE — WhatsApp first (Egypt-heavy audience), then native share, then clipboard
        ============================================================ */
     async function shareInvitation() {
+      const s = (window.SITE_CONTENT && window.SITE_CONTENT.share) || {};
+      const shareTitle  = s.title         || 'John & Mohra — Wedding Invitation';
+      const shareMsg    = s.message       || 'بكل الفرح ندعوكم لمشاركتنا فرحة إكليلنا · John & Mohra · 26 May 2026';
+      const copiedMsg   = s.copiedMessage || '✦ تم نسخ رابط الدعوة';
+
       const url  = window.location.href.split('?')[0]; // strip ?to= so we don't share a personalised link
-      const text = 'بكل الفرح ندعوكم لمشاركتنا فرحة إكليلنا · John & Mohra · 26 May 2026\n' + url;
+      const text = shareMsg + '\n' + url;
       const waUrl = 'https://wa.me/?text=' + encodeURIComponent(text);
 
       /* On mobile, the WhatsApp deep link is the fastest path. On desktop it opens WhatsApp Web. */
@@ -2515,11 +2610,11 @@
           return;
         }
         if (navigator.share) {
-          await navigator.share({ title: 'John & Mohra — Wedding Invitation', text, url });
+          await navigator.share({ title: shareTitle, text, url });
           return;
         }
         await navigator.clipboard.writeText(url);
-        alert('✦ تم نسخ رابط الدعوة');
+        alert(copiedMsg);
       } catch {
         /* user cancelled or browser blocked — fall through silently */
       }
@@ -2546,27 +2641,36 @@
       const guests  = form.guests.value;
 
       /* Build the thank-you DOM safely — no innerHTML, no template-literal interpolation of user input. */
+      const r = (window.SITE_CONTENT && window.SITE_CONTENT.rsvp) || {};
+      const yesPrefix      = r.thanksYesPrefix      != null ? r.thanksYesPrefix      : 'يا أهلاً يا ';
+      const noPrefix       = r.thanksNoPrefix       != null ? r.thanksNoPrefix       : 'شكراً يا ';
+      const defaultName    = r.thanksDefaultName    != null ? r.thanksDefaultName    : 'صديقنا';
+      const yesDetailA     = r.thanksYesDetailPrefix!= null ? r.thanksYesDetailPrefix: 'بنستناك مع ';
+      const yesDetailB     = r.thanksYesDetailMid   != null ? r.thanksYesDetailMid   : ' ضيوف · ';
+      const yesDetailDate  = r.thanksYesDetailDate  != null ? r.thanksYesDetailDate  : '26 May 2026';
+      const noDetail       = r.thanksNoDetail       != null ? r.thanksNoDetail       : 'هنفتقدك معانا، ودعواتك أغلى من حضورك';
+
       thanks.textContent = '';
       const lead = document.createElement('span');
-      lead.textContent = attend === 'yes' ? 'يا أهلاً يا ' : 'شكراً يا ';
+      lead.textContent = attend === 'yes' ? yesPrefix : noPrefix;
       const nameEl = document.createElement('b');
-      nameEl.textContent = name || 'صديقنا';
+      nameEl.textContent = name || defaultName;
       const sparkle = document.createTextNode(' ✦');
       const br = document.createElement('br');
       const detail = document.createElement('span');
       detail.style.cssText = "font-family:'Tajawal',sans-serif;font-style:normal;font-size:.9rem;color:var(--ink-soft);";
       if (attend === 'yes') {
-        detail.appendChild(document.createTextNode('بنستناك مع '));
+        detail.appendChild(document.createTextNode(yesDetailA));
         detail.appendChild(document.createTextNode(String(parseInt(guests, 10) || 1)));
-        detail.appendChild(document.createTextNode(' ضيوف · '));
+        detail.appendChild(document.createTextNode(yesDetailB));
         const dateSpan = document.createElement('span');
         dateSpan.lang = 'en';
-        dateSpan.textContent = '26 May 2026';
+        dateSpan.textContent = yesDetailDate;
         detail.appendChild(dateSpan);
         thanks.append(lead, nameEl, sparkle, br, detail);
         celebrate();
       } else {
-        detail.textContent = 'هنفتقدك معانا، ودعواتك أغلى من حضورك';
+        detail.textContent = noDetail;
         thanks.append(lead, nameEl, sparkle, br, detail);
       }
       thanks.classList.add('show');
